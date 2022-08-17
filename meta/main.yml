@@ -16,4 +16,4 @@ galaxy_info:
   galaxy_tags:
     - nfs
 dependencies:
-  - roberto_farias.conf_base
+  - conf_base
