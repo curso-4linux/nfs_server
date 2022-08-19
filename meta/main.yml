@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: nfs_server
-  author: Roberto Farias
+  author: Roberto_Farias
   description: Instalacao e Configuracao do servidor NFS
   company: 4Linux
   license: GPLv3
