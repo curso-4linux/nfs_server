@@ -43,26 +43,26 @@
     mode: "0755"
   tags: nfs
 
-- name: Configurar contexto de segurança do SELinux para diretórios de conteúdo do Apache
-  when: ansible_os_family == "RedHat"
-  ansible.builtin.command:
-    cmd: semanage fcontext -a -t httpd_sys_content_t "/opt/site(/.*)?"
-  tags: nfs
+#- name: Configurar contexto de segurança do SELinux para diretórios de conteúdo do Apache
+#  when: ansible_os_family == "RedHat"
+#  ansible.builtin.command:
+#    cmd: semanage fcontext -a -t httpd_sys_content_t "/opt/site(/.*)?"
+#  tags: nfs
 
-- name: Restaurar contexto de segurança no diretório de conteúdo
-  when: ansible_os_family == "RedHat"
-  ansible.builtin.command:
-    cmd: restorecon -Rv /opt/site
-  tags: nfs
+#- name: Restaurar contexto de segurança no diretório de conteúdo
+#  when: ansible_os_family == "RedHat"
+#  ansible.builtin.command:
+#    cmd: restorecon -Rv /opt/site
+#  tags: nfs
 
-- name: Ajustar booleano SELinux para NFS
-  when: ansible_os_family == "RedHat"
-  ansible.builtin.command:
-    cmd: setsebool -P nfs_export_all_rw on
-  tags: nfs
+#- name: Ajustar booleano SELinux para NFS
+#  when: ansible_os_family == "RedHat"
+#  ansible.builtin.command:
+#    cmd: setsebool -P nfs_export_all_rw on
+#  tags: nfs
 
-- name: Ajustar booleano SELinux para NFS
-  when: ansible_os_family == "RedHat"
-  ansible.builtin.command:
-    cmd: setsebool -P nfs_export_all_rw on
-  tags: nfs
+#- name: Ajustar booleano SELinux para NFS
+#  when: ansible_os_family == "RedHat"
+#  ansible.builtin.command:
+#    cmd: setsebool -P nfs_export_all_rw on
+#  tags: nfs
